@@ -31,7 +31,7 @@
 
 </head>
 
-<body>
+<body class>
 
 <!-- ======= Header ======= -->
 <header id="header">
@@ -42,25 +42,36 @@
 
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a class="nav-link active" href="#header">Home</a></li>
-                <li><a class="nav-link" href="#about">About</a></li>
-                <li><a class="nav-link" href="#resume">Resume</a></li>
+                <li><a class="nav-link active" href="#header">Accueil</a></li>
+                <li><a class="nav-link" href="#about">A propos</a></li>
+                <li><a class="nav-link" href="#resume">Résumé</a></li>
                 <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
                 <li><a class="nav-link" href="#contact">Contact</a></li>
-                <li><a class="nav-link" download="ArthurVANDAMME.pdf" href="/assets/files/ArthurVANDAMME.pdf">C.V.</a></li>
+                <li><a class="nav-link" download="ArthurVANDAMME.pdf" href="/assets/files/ArthurVANDAMME.pdf">C.V.</a>
+                </li>
+
                 <li>
-                    <a class="nav-link" href="english.html"><img alt="" class="imageMax" src="assets/img/united-kingdom.png"></a>
+                    <button class="buttonTheme" id="themeButton">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun-fill" viewBox="0 0 16 16">
+                            <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+                        </svg>
+                    </button>
+                </li>
+                <li>
+                    <a class="nav-link" href="english.html">
+                        <img alt="" class="imageMax" src="assets/img/united-kingdom.png">
+                    </a>
                 </li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
 
         <div class="social-links">
-            <a href="https://twitter.com/ZartaX0O3" class="twitter"><i class="bi bi-twitter"></i></a>
-            <a href="https://www.facebook.com/vandammearthur" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/vd_arthur_/" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://twitter.com/ZartaX0O3" class="twitter"><i class="bi bi-twitter social"></i></a>
+            <a href="https://www.facebook.com/vandammearthur" class="facebook"><i class="bi bi-facebook social"></i></a>
+            <a href="https://www.instagram.com/vd_arthur_/" class="instagram"><i class="bi bi-instagram social"></i></a>
             <a href="https://www.linkedin.com/in/arthur-van-damme-786b60223/" class="linkedin"><i
-                    class="bi bi-linkedin"></i></a>
+                    class="bi bi-linkedin social"></i></a>
         </div>
 
     </div>
@@ -73,7 +84,7 @@
     <div class="about-me container">
 
         <div class="section-title">
-            <h2>About</h2>
+            <h2>A propos</h2>
             <p>En apprendre plus sur moi</p>
         </div>
 
@@ -170,7 +181,7 @@
     <div class="skills container">
 
         <div class="section-title">
-            <h2>Skills</h2>
+            <h2>Compétences</h2>
         </div>
 
         <div class="row skills-content">
@@ -252,7 +263,7 @@
     <div class="interests container">
 
         <div class="section-title">
-            <h2>Interests</h2>
+            <h2>Centre d'intérêts</h2>
         </div>
 
         <div class="row">
@@ -420,8 +431,8 @@
     <div class="container">
 
         <div class="section-title">
-            <h2>Resume</h2>
-            <p>Check My Resume</p>
+            <h2>Résumé</h2>
+            <p>Plus sur moi</p>
         </div>
 
         <div class="row">
@@ -499,8 +510,8 @@
         <div class="container">
 
             <div class="section-title">
-                <h2>Trips</h2>
-                <p>My Trips</p>
+                <h2>Voyages</h2>
+                <p>Mes Voyages</p>
             </div>
 
             <div class="row">
@@ -515,7 +526,7 @@
 
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
                     <div class="icon-box">
-                        <h4><a href="">Grèce et Italie<br/>(Greece & Italy)</a></h4>
+                        <h4>Grèce et Italie<br/>(Greece & Italy)</h4>
                         <p>Voyage en Grèce et en Italie dans un contexte scolaire, ayant fait le parcours "Latin & Grec"
                             au lycée j'ai pu partir 3 semaines et apprendre une grande partie de l'histoire.</p>
                     </div>
@@ -523,7 +534,7 @@
 
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
                     <div class="icon-box">
-                        <h4><a href="">Espagne</a></h4>
+                        <h4>Espagne</h4>
                         <p>Plusieurs voyages dont plusieurs avec ma famille où l'on a pu traverser le pays presque sur
                             un coup de tête et découvrir des choses incroyables.</p>
                     </div>
@@ -531,7 +542,7 @@
 
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
                     <div class="icon-box">
-                        <h4><a href="">Belgique</a></h4>
+                        <h4>Belgique</h4>
                         <p>Ma famille étant en grande partie en Belgique, c'est souvent l'occasion de tous se revoir et
                             profiter de bons moments.</p>
                     </div>
@@ -539,7 +550,7 @@
 
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
                     <div class="icon-box">
-                        <h4><a href="">Ile Maurice</a></h4>
+                        <h4>Ile Maurice</h4>
                         <p>J'ai eu l'occasion de découvrir sur plusieurs semaines la beauté de l'île Maurice et de tous
                             ses recoins. Des paysages paradisiaques, mais également un environnement protégé autant au
                             niveau de la faune que de la flore.</p>
@@ -548,7 +559,7 @@
 
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
                     <div class="icon-box">
-                        <h4><a href="">Allemagne</a></h4>
+                        <h4>Allemagne</h4>
                         <p>Deux voyages scolaires dans deux régions diamétralement opposées.</p>
                     </div>
                 </div>
@@ -712,7 +723,7 @@
 
         <div class="section-title">
             <h2>Contact</h2>
-            <p>Contact Me</p>
+            <p>Contactez moi</p>
         </div>
 
         <div class="row mt-2">
@@ -806,6 +817,22 @@
 
 <!-- Template Main JS File -->
 <script src="assets/js/main.js"></script>
+
+<script>
+    const body = document.querySelector('body'),
+        modeSwitch = body.querySelector(".buttonTheme");
+
+
+    modeSwitch.addEventListener("click", () => {
+        body.classList.toggle("white");
+
+        if (body.classList.contains("dark")) {
+            localStorage.setItem("mode", "light")
+        } else {
+            localStorage.setItem("mode", "dark")
+        }
+    });
+</script>
 
 </body>
 

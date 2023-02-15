@@ -50,6 +50,13 @@
                 <li><a class="nav-link" download="ArthurVANDAMME.pdf" href="/assets/files/ArthurVANDAMME.pdf">C.V.</a>
                 </li>
                 <li>
+                    <button class="buttonTheme" id="themeButton">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun-fill" viewBox="0 0 16 16">
+                            <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+                        </svg>
+                    </button>
+                </li>
+                <li>
                     <a class="nav-link" href="index.html"><img class="imageMax" alt="" src="assets/img/france.png"></a>
                 </li>
             </ul>
@@ -57,11 +64,11 @@
         </nav>
 
         <div class="social-links">
-            <a href="https://twitter.com/ZartaX0O3" class="twitter"><i class="bi bi-twitter"></i></a>
-            <a href="https://www.facebook.com/vandammearthur" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/vd_arthur_/" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://twitter.com/ZartaX0O3" class="twitter"><i class="bi bi-twitter social"></i></a>
+            <a href="https://www.facebook.com/vandammearthur" class="facebook"><i class="bi bi-facebook social"></i></a>
+            <a href="https://www.instagram.com/vd_arthur_/" class="instagram"><i class="bi bi-instagram social"></i></a>
             <a href="https://www.linkedin.com/in/arthur-van-damme-786b60223/" class="linkedin"><i
-                    class="bi bi-linkedin"></i></a>
+                    class="bi bi-linkedin social"></i></a>
         </div>
 
     </div>
@@ -286,7 +293,7 @@
             <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
                 <div class="icon-box">
                     <i class="ri-car-line" style="color: #e361ff;"></i>
-                    <h3>Auo racing</h3>
+                    <h3>Auto racing</h3>
                 </div>
             </div>
             <div class="col-lg-3 col-md-4 mt-4">
@@ -522,7 +529,7 @@
 
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
                     <div class="icon-box">
-                        <h4><a href="">Greece and Italy</a></h4>
+                        <h4>Greece and Italy</h4>
                         <p>Greece and Italy trip in a school context, having taken the "Latin & Greek" program in
                             high school, I was able to go for 3 weeks and learn a lot of history.</p>
                     </div>
@@ -530,7 +537,7 @@
 
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
                     <div class="icon-box">
-                        <h4><a href="">Spain</a></h4>
+                        <h4>Spain</h4>
                         <p>Several trips, including several with my family where we were able to cross the country
                             on a whim and discover amazing things.</p>
                     </div>
@@ -538,7 +545,7 @@
 
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
                     <div class="icon-box">
-                        <h4><a href="">Belgium</a></h4>
+                        <h4>Belgium</h4>
                         <p>My family is mostly in Belgium, so it's often an opportunity for us all to get together
                             and enjoy good times.</p>
                     </div>
@@ -546,7 +553,7 @@
 
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
                     <div class="icon-box">
-                        <h4><a href="">Mauritius</a></h4>
+                        <h4>Mauritius</h4>
                         <p>I had the opportunity to discover the beauty of Mauritius for several weeks and all its
                             nooks and crannies. Paradise landscapes, but also a protected environment for both
                             wildlife and flora.</p>
@@ -555,7 +562,7 @@
 
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
                     <div class="icon-box">
-                        <h4><a href="">Germany</a></h4>
+                        <h4>Germany</h4>
                         <p>Two school trips in two vastly different regions.</p>
                     </div>
                 </div>
@@ -813,6 +820,23 @@
 
 <!-- Template Main JS File -->
 <script src="assets/js/main.js"></script>
+
+
+<script>
+    const body = document.querySelector('body'),
+        modeSwitch = body.querySelector(".buttonTheme");
+
+
+    modeSwitch.addEventListener("click", () => {
+        body.classList.toggle("white");
+
+        if (body.classList.contains("dark")) {
+            localStorage.setItem("mode", "light")
+        } else {
+            localStorage.setItem("mode", "dark")
+        }
+    });
+</script>
 
 </body>
 
