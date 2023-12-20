@@ -24,7 +24,10 @@
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
 
@@ -526,55 +529,167 @@
 
             <div class="row">
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                    <div class="icon-box">
+                    <div class="icon-box map">
                         <h4>Royaume-Uni<br/>(United Kingdom)</h4>
                         <p>Multiples voyages de plusieurs semaines dont 2 échanges dans une famille anglaise de Bristol.
                             J'ai pu apprendre une nouvelle culture et un nouveau mode de vie, mais également rencontrer
-                            des personnes merveilleuses</p>
+                            des personnes merveilleuses</p><br>
+
+                            <button class="btn btn-success show-map-btn">Show Map</button>
                     </div>
+
                 </div>
 
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-                    <div class="icon-box">
+                    <div class="icon-box map">
                         <h4>Grèce et Italie<br/>(Greece & Italy)</h4>
                         <p>Voyage en Grèce et en Italie dans un contexte scolaire, ayant fait le parcours "Latin & Grec"
-                            au lycée j'ai pu partir 3 semaines et apprendre une grande partie de l'histoire.</p>
+                            au lycée j'ai pu partir 3 semaines et apprendre une grande partie de l'histoire.</p><br>
+
+                            <button class="btn btn-success show-map-btn">Show Map</button>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-                    <div class="icon-box">
+                    <div class="icon-box map">
                         <h4>Espagne</h4>
                         <p>Plusieurs voyages dont plusieurs avec ma famille où l'on a pu traverser le pays presque sur
-                            un coup de tête et découvrir des choses incroyables.</p>
+                            un coup de tête et découvrir des choses incroyables.</p><br>
+
+                            <button class="btn btn-success show-map-btn">Show Map</button>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <div class="icon-box">
+                    <div class="icon-box map">
                         <h4>Belgique</h4>
                         <p>Ma famille étant en grande partie en Belgique, c'est souvent l'occasion de tous se revoir et
-                            profiter de bons moments.</p>
+                            profiter de bons moments.</p><br>
+
+                            <button class="btn btn-success show-map-btn">Show Map</button>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <div class="icon-box">
+                    <div class="icon-box map">
                         <h4>Ile Maurice</h4>
                         <p>J'ai eu l'occasion de découvrir sur plusieurs semaines la beauté de l'île Maurice et de tous
                             ses recoins. Des paysages paradisiaques, mais également un environnement protégé autant au
-                            niveau de la faune que de la flore.</p>
+                            niveau de la faune que de la flore.</p><br>
+
+                            <button class="btn btn-success show-map-btn">Show Map</button>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <div class="icon-box">
+                    <div class="icon-box map">
                         <h4>Allemagne</h4>
-                        <p>Deux voyages scolaires dans deux régions diamétralement opposées.</p>
+                        <p>Deux voyages scolaires dans deux régions diamétralement opposées.</p><br>
+
+                        <button class="btn btn-success show-map-btn">Show Map</button>
                     </div>
                 </div>
 
             </div>
+
+            <div class="row">
+                <div class="col-lg-12 top">
+                    <div id="voyages-map" style="height: 400px;"></div>
+                </div>
+            </div>
+
+            <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    var map = L.map('voyages-map').setView([45.7514195, 3.1180425], 5); // Set a default center and zoom
+
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        attribution: '&copy; OpenStreetMap contributors'
+                    }).addTo(map);
+
+                    var marker = L.marker([45.7514195, 3.1180425]).addTo(map); // Initialize marker at the default position
+
+                    var destinations = {
+                        0: {
+                            locations: [
+                                { name: 'Londre', coordinates: [51.509865, -0.118092] },
+                                { name: 'Oxford', coordinates: [51.752022, -1.257677] },
+                                { name: 'Bristol', coordinates: [51.454513, -2.58791] },
+                                { name: 'Thornsbury', coordinates: [51.609246, -2.525592] },
+                                { name: 'Worcester', coordinates: [52.193636, -2.221575] }
+                            ]
+                        },
+                        1: {
+                            locations: [
+                                { name: 'Athène', coordinates: [37.9838, 23.7275] },
+                                { name: 'Igoumensta', coordinates: [39.9807, 20.2512] },
+                                { name: 'Tripoli', coordinates: [37.5099, 22.3794] },
+                                { name: 'Patras', coordinates: [38.2544, 21.7371] },
+                                { name: 'Delphes', coordinates: [38.4823, 22.5001] }
+                            ]
+                        },
+                        2: {
+                            locations: [
+                                { name: 'Madrid', coordinates: [40.4168, -3.7038] },
+                                { name: 'Zaragosa', coordinates: [41.6488, -0.8891] },
+                                { name: 'Carthagene', coordinates: [37.6256, -0.9963] },
+                                { name: 'Lloret del mar', coordinates: [41.7014, 2.8262] }
+                            ]
+                        },
+                        3: {
+                            locations: [
+                                { name: 'Itre', coordinates: [50.6814, 4.5825] },
+                                { name: 'Bruxelles', coordinates: [50.8503, 4.3517] },
+                                { name: 'De Haan', coordinates: [51.2667, 3.0333] },
+                                { name: 'Waterloo', coordinates: [50.7174, 4.4068] },
+                                { name: 'Bastogne', coordinates: [50.0035, 5.718] }
+                            ]
+                        },
+                        4: {
+                            locations: [
+                                { name: "Pereybere", coordinates: [-19.98848387619781, 57.60311299817161]},
+                                { name: "Port Louis", coordinates: [-20.16379222744191, 57.50272786614233]},
+                                { name: "Pointe d'Esny", coordinates: [-20.42995447564564, 57.72665894273037]}
+                            ]
+                        },
+                        5: {
+                            locations: [
+                                { name: 'Berlin', coordinates: [52.5200, 13.4050] },
+                                { name: 'Sans-Soucis', coordinates: [52.40435214671828, 13.038403327314006] },
+                                { name: 'Leipzig', coordinates: [51.3400, 12.3800] },
+                                { name: 'Karlsruhe', coordinates: [49.005686156886426, 8.40266513990845]}
+                            ]
+                        },
+                    };
+                        
+                    // Function to handle map display on button click
+                    function showMap(index) {
+                        var destination = destinations[index];
+            
+                        map.eachLayer(function (layer) {
+                            if (layer instanceof L.Marker) {
+                                map.removeLayer(layer);
+                            }
+                        });
+            
+                        destination.locations.forEach(function (location) {
+                            L.marker(location.coordinates).addTo(map).bindPopup(location.name);
+                        });
+            
+                        var coordinates = destination.locations.map(function (location) {
+                            return location.coordinates;
+                        });
+                        map.fitBounds(coordinates);
+                    }
+            
+                    // Attach click event to each button
+                    $('.show-map-btn').each(function (index) {
+                        $(this).on('click', function () {
+                            showMap(index);
+                        });
+                    });
+                });
+            </script>
 
         </div>
     </div>

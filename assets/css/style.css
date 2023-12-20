@@ -729,10 +729,29 @@ section .container {
 # Services
 --------------------------------------------------------------*/
 .services .icon-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   text-align: center;
   background: rgba(204, 204, 204, 0.1);
-  padding: 80px 20px;
+  padding: 20px;
+  margin-bottom: 20px;
   transition: all ease-in-out 0.3s;
+  position: relative; 
+  height: 100%; 
+}
+
+
+.services .icon-box .show-map-btn {
+  width: 100%;
+  transition: background-color 0.3s ease-out;
+}
+
+.services .icon-box:hover .show-map-btn {
+  background-color: #18d26e; 
+  box-shadow: 0 0 10px 2px #18d26e; 
+  color: #fff;
 }
 
 .services .icon-box .icon {
@@ -784,8 +803,8 @@ section .container {
 }
 
 .services .icon-box:hover {
-  background: #18d26e;
-  border-color: #18d26e;
+  background: rgba(204, 204, 204, 0.1);
+  border-color: rgba(204, 204, 204, 0.1);
 }
 
 .services .icon-box:hover .icon {
@@ -803,6 +822,10 @@ section .container {
 .services .icon-box:hover h4 a,
 .services .icon-box:hover p {
   color: #fff;
+}
+
+.services .top {
+  margin-top:  20px;
 }
 
 /*--------------------------------------------------------------
